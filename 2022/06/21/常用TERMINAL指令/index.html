@@ -16,26 +16,22 @@
   <meta name="author" content="Wenjie Fu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Encoder-Decoder框架Encoder-Decoder是深度学习中非常常见的一个模型框架。例如：在Image Caption的应用中Encoder-Decoder就是CNN-RNN的编码-解码框架；在神经网络机器翻译模型中Encoder-Decoder往往就是LSTM-LSTM的编码-解码框架。特别需要注意的是，在机器翻译中是文本到文本的转换，比如将法语翻译成英语，这样的Encoder-">
+    <meta name="description" content="Windows 端口占用查看被占用端口对应的 PID1netstat -aon|findstr &quot;8081&quot; 查看指定 PID 的进程1tasklist|findstr &quot;9088&quot; 结束进程1taskkill &#x2F;T &#x2F;F &#x2F;PID 9088">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Attention 机制">
-<meta property="og:url" content="http://example.com/2022/06/21/Attention-%E6%9C%BA%E5%88%B6/index.html">
+<meta property="og:title" content="常用TERMINAL指令">
+<meta property="og:url" content="http://example.com/2022/06/21/%E5%B8%B8%E7%94%A8TERMINAL%E6%8C%87%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Encoder-Decoder框架Encoder-Decoder是深度学习中非常常见的一个模型框架。例如：在Image Caption的应用中Encoder-Decoder就是CNN-RNN的编码-解码框架；在神经网络机器翻译模型中Encoder-Decoder往往就是LSTM-LSTM的编码-解码框架。特别需要注意的是，在机器翻译中是文本到文本的转换，比如将法语翻译成英语，这样的Encoder-">
+<meta property="og:description" content="Windows 端口占用查看被占用端口对应的 PID1netstat -aon|findstr &quot;8081&quot; 查看指定 PID 的进程1tasklist|findstr &quot;9088&quot; 结束进程1taskkill &#x2F;T &#x2F;F &#x2F;PID 9088">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/images/2022-06-21-21-31-22.png">
-<meta property="og:image" content="http://example.com/images/2022-06-21-21-33-38.png">
-<meta property="article:published_time" content="2022-06-21T06:56:15.000Z">
-<meta property="article:modified_time" content="2022-06-21T13:35:42.796Z">
+<meta property="article:published_time" content="2022-06-21T13:37:12.000Z">
+<meta property="article:modified_time" content="2022-06-21T13:43:19.054Z">
 <meta property="article:author" content="Wenjie Fu">
-<meta property="article:tag" content="attention">
-<meta property="article:tag" content="deep learning">
+<meta property="article:tag" content="terminal">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/images/2022-06-21-21-31-22.png">
   
   
   
-  <title>Attention 机制 - Hexo</title>
+  <title>常用TERMINAL指令 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Attention 机制"></span>
+            <span id="subtitle" data-typed-text="常用TERMINAL指令"></span>
           
         </div>
 
@@ -211,7 +207,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-21 14:56" pubdate>
+        <time datetime="2022-06-21 21:37" pubdate>
           June 21, 2022 pm
         </time>
       </span>
@@ -223,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          498 words
+          128 words
         
       </span>
     
@@ -234,7 +230,7 @@
         
         
         
-          5 mins
+          2 mins
         
       </span>
     
@@ -272,14 +268,14 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Attention 机制</h1>
+            <h1 style="display: none">常用TERMINAL指令</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="Encoder-Decoder框架"><a href="#Encoder-Decoder框架" class="headerlink" title="Encoder-Decoder框架"></a>Encoder-Decoder框架</h1><p>Encoder-Decoder是深度学习中非常常见的一个模型框架。例如：在Image Caption的应用中Encoder-Decoder就是CNN-RNN的编码-解码框架；在神经网络机器翻译模型中Encoder-Decoder往往就是LSTM-LSTM的编码-解码框架。特别需要注意的是，在机器翻译中是文本到文本的转换，比如将法语翻译成英语，这样的Encoder-Decoder模型也被叫做Sequence to Sequence learning[6]。所谓编码，就是将输入序列编码成一个固定长度的向量；解码，就是将之前生成的固定向量再解码成输出序列。<br><img src="/../images/2022-06-21-21-31-22.png" srcset="/img/loading.gif" lazyload><br><strong>局限性很大</strong></p>
-<h1 id="Attention-机制"><a href="#Attention-机制" class="headerlink" title="Attention 机制"></a>Attention 机制</h1><p>相比于原始的Encoder-Decoder模型，加入Attention机制后最大的区别就是它不在要求编码器将所有输入信息都编码进一个固定长度的向量之中。而是，编码器需要将输入编码成一个向量的序列，在解码的时候，每一步都会选择性的从向量序列中挑选一个子集进行进一步处理。这样，在产生每一个输出的时候，都能够做到充分利用输入序列携带的信息。而且这种方法在翻译任务中取得了非常不错的成果。<br><img src="/../images/2022-06-21-21-33-38.png" srcset="/img/loading.gif" lazyload></p>
-
+                <h1 id="Windows-端口占用"><a href="#Windows-端口占用" class="headerlink" title="Windows 端口占用"></a>Windows 端口占用</h1><h2 id="查看被占用端口对应的-PID"><a href="#查看被占用端口对应的-PID" class="headerlink" title="查看被占用端口对应的 PID"></a>查看被占用端口对应的 PID</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">netstat -aon|findstr <span class="hljs-string">&quot;8081&quot;</span><br></code></pre></td></tr></table></figure>
+<h2 id="查看指定-PID-的进程"><a href="#查看指定-PID-的进程" class="headerlink" title="查看指定 PID 的进程"></a>查看指定 PID 的进程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tasklist|findstr <span class="hljs-string">&quot;9088&quot;</span><br></code></pre></td></tr></table></figure>
+<h2 id="结束进程"><a href="#结束进程" class="headerlink" title="结束进程"></a>结束进程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">taskkill /T /F /PID 9088 <br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -287,34 +283,11 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/deep-learning/" class="category-chain-item">deep learning</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/attention/">#attention</a>
-      
-        <a href="/tags/deep-learning/">#deep learning</a>
+        <a href="/tags/terminal/">#terminal</a>
       
     </div>
   
@@ -326,8 +299,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Attention 机制</div>
-      <div>http://example.com/2022/06/21/Attention-机制/</div>
+      <div>常用TERMINAL指令</div>
+      <div>http://example.com/2022/06/21/常用TERMINAL指令/</div>
     </div>
     <div class="license-meta">
       
@@ -369,18 +342,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/21/%E5%B8%B8%E7%94%A8TERMINAL%E6%8C%87%E4%BB%A4/" title="常用TERMINAL指令">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">常用TERMINAL指令</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/21/markdown/" title="Markdown">
-                        <span class="hidden-mobile">Markdown</span>
+                      <a href="/2022/06/21/Attention-%E6%9C%BA%E5%88%B6/" title="Attention 机制">
+                        <span class="hidden-mobile">Attention 机制</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -398,6 +365,16 @@
 
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;Table of Contents</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
 
     </div>
   </div>
@@ -523,6 +500,34 @@
   
 
 
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
