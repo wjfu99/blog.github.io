@@ -4,12 +4,31 @@
   
   
   <entry>
+    <title>RNN入门</title>
+    <link href="/2022/06/22/RNN%E5%85%A5%E9%97%A8/"/>
+    <url>/2022/06/22/RNN%E5%85%A5%E9%97%A8/</url>
+    
+    <content type="html"><![CDATA[<p>前馈网络和循环网络<br>前馈网络没有时间顺序的概念，它考虑的唯一输入就是它所接触到的当前的输入样例。<br><img src="https://pic3.zhimg.com/80/v2-1454b64db5c1be85f263dfd74d58cdd6_1440w.jpg"><br>与前馈网络相比，循环网络的输入不仅包括当前的输入样例，还包括之前的输入信息。<br><img src="https://pic2.zhimg.com/80/v2-8d9e670856368335f3ad14d295504ca1_1440w.jpg"></p><h1 id="时序反向传播算法BPTT"><a href="#时序反向传播算法BPTT" class="headerlink" title="时序反向传播算法BPTT"></a>时序反向传播算法BPTT</h1><p>而循环网络依赖于反向传播的一种扩展，称为时序反向传播算法，即BPTT<br><img src="/../images/2022-06-22-16-18-02.png"><br>对应会出现梯度消失&#x2F;爆炸，对应LSTM会解决这两个问题</p><h1 id="LSTM"><a href="#LSTM" class="headerlink" title="LSTM"></a>LSTM</h1><p>x<br><img src="https://pic4.zhimg.com/80/v2-e4f9851cad426dfe4ab1c76209546827_1440w.jpg"><br>LSTM有两个传输状态，一个（cell state），和一个（hidden state）。c_t改变的很慢，ht在每个不同节点的区别很大。</p><p><img src="https://pic2.zhimg.com/80/v2-556c74f0e025a47fea05dc0f76ea775d_1440w.jpg"><br><img src="/../images/2022-06-22-17-07-13.png"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>常用TERMINAL指令</title>
     <link href="/2022/06/21/%E5%B8%B8%E7%94%A8TERMINAL%E6%8C%87%E4%BB%A4/"/>
     <url>/2022/06/21/%E5%B8%B8%E7%94%A8TERMINAL%E6%8C%87%E4%BB%A4/</url>
     
     <content type="html"><![CDATA[<h1 id="Windows-端口占用"><a href="#Windows-端口占用" class="headerlink" title="Windows 端口占用"></a>Windows 端口占用</h1><h2 id="查看被占用端口对应的-PID"><a href="#查看被占用端口对应的-PID" class="headerlink" title="查看被占用端口对应的 PID"></a>查看被占用端口对应的 PID</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">netstat -aon|findstr <span class="hljs-string">&quot;8081&quot;</span><br></code></pre></td></tr></table></figure><h2 id="查看指定-PID-的进程"><a href="#查看指定-PID-的进程" class="headerlink" title="查看指定 PID 的进程"></a>查看指定 PID 的进程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tasklist|findstr <span class="hljs-string">&quot;9088&quot;</span><br></code></pre></td></tr></table></figure><h2 id="结束进程"><a href="#结束进程" class="headerlink" title="结束进程"></a>结束进程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">taskkill /T /F /PID 9088 <br></code></pre></td></tr></table></figure>]]></content>
     
+    
+    <categories>
+      
+      <category>Programming related</category>
+      
+    </categories>
     
     
     <tags>
@@ -27,7 +46,7 @@
     <link href="/2022/06/21/Attention-%E6%9C%BA%E5%88%B6/"/>
     <url>/2022/06/21/Attention-%E6%9C%BA%E5%88%B6/</url>
     
-    <content type="html"><![CDATA[<h1 id="Encoder-Decoder框架"><a href="#Encoder-Decoder框架" class="headerlink" title="Encoder-Decoder框架"></a>Encoder-Decoder框架</h1><p>Encoder-Decoder是深度学习中非常常见的一个模型框架。例如：在Image Caption的应用中Encoder-Decoder就是CNN-RNN的编码-解码框架；在神经网络机器翻译模型中Encoder-Decoder往往就是LSTM-LSTM的编码-解码框架。特别需要注意的是，在机器翻译中是文本到文本的转换，比如将法语翻译成英语，这样的Encoder-Decoder模型也被叫做Sequence to Sequence learning[6]。所谓编码，就是将输入序列编码成一个固定长度的向量；解码，就是将之前生成的固定向量再解码成输出序列。<br><img src="/../images/2022-06-21-21-31-22.png"><br><strong>局限性很大</strong></p><h1 id="Attention-机制"><a href="#Attention-机制" class="headerlink" title="Attention 机制"></a>Attention 机制</h1><p>相比于原始的Encoder-Decoder模型，加入Attention机制后最大的区别就是它不在要求编码器将所有输入信息都编码进一个固定长度的向量之中。而是，编码器需要将输入编码成一个向量的序列，在解码的时候，每一步都会选择性的从向量序列中挑选一个子集进行进一步处理。这样，在产生每一个输出的时候，都能够做到充分利用输入序列携带的信息。而且这种方法在翻译任务中取得了非常不错的成果。<br><img src="/../images/2022-06-21-21-33-38.png"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Attention-mechanism-research-timeline"><a href="#Attention-mechanism-research-timeline" class="headerlink" title="Attention mechanism research timeline"></a>Attention mechanism research timeline</h1><p>1.2014, Google Mind team published “Recurrent Models of Visual Attention”.<br>2.2015, “Neural Machine Translation by Jointly Learning to Align and Translate”, the first paper utilized attention mechanism in NLP.<br>3.Show, Attend and Tell: Neural Image Caption Generation with Visual Attention, image caption<br>4.2017, Attention is all you need</p><hr><h1 id="Encoder-Decoder框架"><a href="#Encoder-Decoder框架" class="headerlink" title="Encoder-Decoder框架"></a>Encoder-Decoder框架</h1><p>Encoder-Decoder是深度学习中非常常见的一个模型框架。例如：在Image Caption的应用中Encoder-Decoder就是CNN-RNN的编码-解码框架；在神经网络机器翻译模型中Encoder-Decoder往往就是LSTM-LSTM的编码-解码框架。特别需要注意的是，在机器翻译中是文本到文本的转换，比如将法语翻译成英语，这样的Encoder-Decoder模型也被叫做Sequence to Sequence learning[6]。所谓编码，就是将输入序列编码成一个固定长度的向量；解码，就是将之前生成的固定向量再解码成输出序列。</p><ul><li>rnn的一个例子<br><img src="/../images/2022-06-22-10-07-40.png"><center>convert the information to fixed length with nonlinear function q</center>The familiar operation of q it user the last of sequence h_t</li></ul><p>ffff<br><img src="/../images/2022-06-21-21-31-22.png"></p><h1 id="Attention-机制"><a href="#Attention-机制" class="headerlink" title="Attention 机制"></a>Attention 机制</h1><p>相比于原始的Encoder-Decoder模型，加入Attention机制后最大的区别就是它不在要求编码器将所有输入信息都编码进一个固定长度的向量之中。而是，编码器需要将输入编码成一个向量的序列，在解码的时候，每一步都会选择性的从向量序列中挑选一个子集进行进一步处理。这样，在产生每一个输出的时候，都能够做到充分利用输入序列携带的信息。而且这种方法在翻译任务中取得了非常不错的成果。<br><img src="/../images/2022-06-21-21-33-38.png"></p>]]></content>
     
     
     <categories>
@@ -54,12 +73,12 @@
     <link href="/2022/06/21/markdown/"/>
     <url>/2022/06/21/markdown/</url>
     
-    <content type="html"><![CDATA[<p>#用来代表标题的</p>]]></content>
+    <content type="html"><![CDATA[<p>#用来代表标题的<br>*unordered list<br>1.ordered list</p>]]></content>
     
     
     <categories>
       
-      <category>deep learning</category>
+      <category>Programming related</category>
       
     </categories>
     
@@ -79,7 +98,7 @@
     <link href="/2022/06/21/hello-world/"/>
     <url>/2022/06/21/hello-world/</url>
     
-    <content type="html"><![CDATA[<h1 id="blog-post-parameters"><a href="#blog-post-parameters" class="headerlink" title="blog post parameters"></a>blog post parameters</h1><p><img src="/../images/2022-06-21-21-49-33.png"></p><h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><p>hexo toc支持可生成文章目录<br><img src="/../images/2022-06-21-21-52-01.png"></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p><h1 id="blog-post-parameters"><a href="#blog-post-parameters" class="headerlink" title="blog post parameters"></a>blog post parameters</h1><p><img src="/../images/2022-06-21-21-49-33.png"></p><h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><p>hexo toc支持可生成文章目录<br><img src="/../images/2022-06-21-21-52-01.png"></p>]]></content>
     
     
     
