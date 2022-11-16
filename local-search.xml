@@ -4,11 +4,50 @@
   
   
   <entry>
+    <title>Privacy</title>
+    <link href="/2022/11/16/Privacy/"/>
+    <url>/2022/11/16/Privacy/</url>
+    
+    <content type="html"><![CDATA[<h2 id="the-sensitivity-of-differential-privacy">The Sensitivity ofDifferential Privacy</h2><p>Numeric queries, functions such as, <span class="math inline">\(f:\mathbb{N}^{|\mathcal{X}|} \to \mathbb{R}^k\)</span>are one of the mostfundamental types of database queries. These queries map databases to kreal numbers. One of the important parameters that will determine justhow accurately we can answer such queries is their ℓ1 sensitivity. <imgsrc="../images/2022-11-16-10-04-42.png" /> The ℓ1 sensitivity of afunction gives an upper bound on how much we must perturb its output topreserve privacy, i.e., The ℓ1 sensitivity of a function f captures themagnitude by which a single individual’s data can change the function fin the worst case, and therefore, intuitively, the uncertainty in theresponse that we must introduce in order to hide the participation of asingle individual.</p><h2 id="guassian-mechanism">Guassian Mechanism</h2><p>The Gaussian mechanism is an alternative to the Laplace mechanism,which adds Gaussian noise instead of Laplacian noise. The Gaussianmechanism does not satisfy pure ε-differential privacy, but does satisfy(ε, δ)-differential privacy.</p><p><span class="math inline">\(\sigma^2 = \frac{2\Delta f^2ln(1.25/\delta)}{\epsilon^2}\)</span> for <spanclass="math inline">\(\epsilon \in (0, 1)\)</span>, where <spanclass="math inline">\(\Delta f\)</span> is the <spanclass="math inline">\(l_1\)</span>-sensitivity of <spanclass="math inline">\(f\)</span>.</p><h2 id="laplacian-mechanism">Laplacian Mechanism</h2><h2 id="composition-theorem">Composition Theorem</h2>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hexo 博客搭建</title>
+    <link href="/2022/07/15/hello-world/"/>
+    <url>/2022/07/15/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>https://hexo.io/zh-cn/docs/commands # blog post parameters <imgsrc="../images/2022-06-21-21-49-33.png" /></p><h1 id="其它">其它</h1><p>hexo toc支持可生成文章目录 <imgsrc="../images/2022-06-21-21-52-01.png" /></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>simplicial</title>
+    <link href="/2022/06/28/complex/"/>
+    <url>/2022/06/28/complex/</url>
+    
+    <content type="html"><![CDATA[<h1 id="simplexplural-simplexes-or-simplices">simplex(plural: simplexesor simplices)</h1><p>In geometry, a simplex (plural: simplexes or simplices) is ageneralization of the notion of a triangle or tetrahedron to arbitrarydimensions. The simplex is so-named because it represents the simplestpossible polytope made with line segments in any given dimension. #complex simplex</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Export all Endnote files to Zotero</title>
     <link href="/2022/06/22/zotero/"/>
     <url>/2022/06/22/zotero/</url>
     
-    <content type="html"><![CDATA[<p>1.清空Endnote中全部文献的keywords字段内容。在Endnote中，选择全部文献，Tools -&gt; Change&#x2F;Move&#x2F;Copy Fields…，在Select a field下拉框中选择“Keywords”，在下面的单选框中先选择“Clear field”-&gt; 确定，清空keywords字段全部内容。</p><p>2.将Endnote的groups名称赋给keywords字段。在Endnote中，选中一个group下的全部文献，Tools -&gt; Change&#x2F;Move&#x2F;Copy Fields…，在Select a field下拉框中选择“Insert after field’s text”，取消选择“Include a space before the new text”，在右侧文本框中先输入回车、第二行输入所选Group名称，点击确定，将把此Group名称写入每个文献的Keywords字段。依次选择其它Group并重复以上步骤，将全部groups的名称赋给keywords。</p><p>3.导出Endnote文献库。Endnote -&gt; File -&gt; Export，保存类型改为xml，Output style为Show all files，取消选择Export selected reference，点击保存。将整个文献库导出为xml格式，将导出的xml文件与Endnote的pdf文件夹（xxx.Data）并列。</p><p>4.修改xml文件内容。将.xml文件用记事本打开，把全部“internal-pdf:&#x2F;&#x2F;”替换为“&#x2F;文件名.Data&#x2F;PDF&#x2F;”并保存。</p><p>5.导入到Zotero。Zotero -&gt; 文件 -&gt; 导入，文献较多时需等待较长时间。导入以后Endnote中的keywords字段内容将逐个转换为Zotero中的“标签Tags”。</p><p>6.在Zotero中重建分组。在Zotero中用搜索功能，逐个搜索各标签，手动重建Collections（即Endnote中的Groups）。</p>]]></content>
+    <content type="html"><![CDATA[<ol type="1"><li><p>清空Endnote中全部文献的keywords字段内容。在Endnote中，选择全部文献，Tools-&gt; Change/Move/Copy Fields...，在Select afield下拉框中选择“Keywords”，在下面的单选框中先选择“Clear field”-&gt;确定，清空keywords字段全部内容。</p></li><li><p>将Endnote的groups名称赋给keywords字段。在Endnote中，选中一个group下的全部文献，Tools-&gt; Change/Move/Copy Fields...，在Select a field下拉框中选择“Insertafter field's text”，取消选择“Include a space before the newtext”，在右侧文本框中先输入回车、第二行输入所选Group名称，点击确定，将把此Group名称写入每个文献的Keywords字段。依次选择其它Group并重复以上步骤，将全部groups的名称赋给keywords。</p></li><li><p>导出Endnote文献库。Endnote -&gt; File -&gt;Export，保存类型改为xml，Output style为Show all files，取消选择Exportselectedreference，点击保存。将整个文献库导出为xml格式，将导出的xml文件与Endnote的pdf文件夹（xxx.Data）并列。</p></li><li><p>修改xml文件内容。将.xml文件用记事本打开，把全部“internal-pdf://”替换为“/文件名.Data/PDF/”并保存。</p></li><li><p>导入到Zotero。Zotero -&gt; 文件 -&gt;导入，文献较多时需等待较长时间。导入以后Endnote中的keywords字段内容将逐个转换为Zotero中的“标签Tags”。</p></li><li><p>在Zotero中重建分组。在Zotero中用搜索功能，逐个搜索各标签，手动重建Collections（即Endnote中的Groups）。</p></li></ol>]]></content>
     
     
     <categories>
@@ -27,7 +66,7 @@
     <link href="/2022/06/22/RNN%E5%85%A5%E9%97%A8/"/>
     <url>/2022/06/22/RNN%E5%85%A5%E9%97%A8/</url>
     
-    <content type="html"><![CDATA[<p>前馈网络和循环网络<br>前馈网络没有时间顺序的概念，它考虑的唯一输入就是它所接触到的当前的输入样例。<br><img src="https://pic3.zhimg.com/80/v2-1454b64db5c1be85f263dfd74d58cdd6_1440w.jpg"><br>与前馈网络相比，循环网络的输入不仅包括当前的输入样例，还包括之前的输入信息。<br><img src="https://pic2.zhimg.com/80/v2-8d9e670856368335f3ad14d295504ca1_1440w.jpg"></p><h1 id="时序反向传播算法BPTT"><a href="#时序反向传播算法BPTT" class="headerlink" title="时序反向传播算法BPTT"></a>时序反向传播算法BPTT</h1><p>而循环网络依赖于反向传播的一种扩展，称为时序反向传播算法，即BPTT<br><img src="/../images/2022-06-22-16-18-02.png"><br>对应会出现梯度消失&#x2F;爆炸，对应LSTM会解决这两个问题</p><h1 id="LSTM"><a href="#LSTM" class="headerlink" title="LSTM"></a>LSTM</h1><p>x<br><img src="https://pic4.zhimg.com/80/v2-e4f9851cad426dfe4ab1c76209546827_1440w.jpg"><br>LSTM有两个传输状态，一个（cell state），和一个（hidden state）。c_t改变的很慢，ht在每个不同节点的区别很大。</p><p><img src="https://pic2.zhimg.com/80/v2-556c74f0e025a47fea05dc0f76ea775d_1440w.jpg"><br><img src="/../images/2022-06-22-17-07-13.png"></p>]]></content>
+    <content type="html"><![CDATA[<p>前馈网络和循环网络前馈网络没有时间顺序的概念，它考虑的唯一输入就是它所接触到的当前的输入样例。<imgsrc="https://pic3.zhimg.com/80/v2-1454b64db5c1be85f263dfd74d58cdd6_1440w.jpg" />与前馈网络相比，循环网络的输入不仅包括当前的输入样例，还包括之前的输入信息。<imgsrc="https://pic2.zhimg.com/80/v2-8d9e670856368335f3ad14d295504ca1_1440w.jpg" /># 时序反向传播算法BPTT而循环网络依赖于反向传播的一种扩展，称为时序反向传播算法，即BPTT <imgsrc="../images/2022-06-22-16-18-02.png" />对应会出现梯度消失/爆炸，对应LSTM会解决这两个问题</p><h1 id="lstm">LSTM</h1><p>x <imgsrc="https://pic4.zhimg.com/80/v2-e4f9851cad426dfe4ab1c76209546827_1440w.jpg" />LSTM有两个传输状态，一个（cell state），和一个（hiddenstate）。c_t改变的很慢，ht在每个不同节点的区别很大。</p><p><imgsrc="https://pic2.zhimg.com/80/v2-556c74f0e025a47fea05dc0f76ea775d_1440w.jpg" /><img src="../images/2022-06-22-17-07-13.png" /></p>]]></content>
     
     
     
@@ -40,7 +79,7 @@
     <link href="/2022/06/21/%E5%B8%B8%E7%94%A8TERMINAL%E6%8C%87%E4%BB%A4/"/>
     <url>/2022/06/21/%E5%B8%B8%E7%94%A8TERMINAL%E6%8C%87%E4%BB%A4/</url>
     
-    <content type="html"><![CDATA[<h1 id="Windows-端口占用"><a href="#Windows-端口占用" class="headerlink" title="Windows 端口占用"></a>Windows 端口占用</h1><h2 id="查看被占用端口对应的-PID"><a href="#查看被占用端口对应的-PID" class="headerlink" title="查看被占用端口对应的 PID"></a>查看被占用端口对应的 PID</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">netstat -aon|findstr <span class="hljs-string">&quot;8081&quot;</span><br></code></pre></td></tr></table></figure><h2 id="查看指定-PID-的进程"><a href="#查看指定-PID-的进程" class="headerlink" title="查看指定 PID 的进程"></a>查看指定 PID 的进程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tasklist|findstr <span class="hljs-string">&quot;9088&quot;</span><br></code></pre></td></tr></table></figure><h2 id="结束进程"><a href="#结束进程" class="headerlink" title="结束进程"></a>结束进程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">taskkill /T /F /PID 9088 <br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="windows-端口占用">Windows 端口占用</h1><h2 id="查看被占用端口对应的-pid">查看被占用端口对应的 PID</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">netstat -aon|findstr <span class="hljs-string">&quot;8081&quot;</span><br></code></pre></td></tr></table></figure><h2 id="查看指定-pid-的进程">查看指定 PID 的进程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tasklist|findstr <span class="hljs-string">&quot;9088&quot;</span><br></code></pre></td></tr></table></figure><h2 id="结束进程">结束进程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">taskkill /T /F /PID 9088 <br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
@@ -65,7 +104,7 @@
     <link href="/2022/06/21/Attention-%E6%9C%BA%E5%88%B6/"/>
     <url>/2022/06/21/Attention-%E6%9C%BA%E5%88%B6/</url>
     
-    <content type="html"><![CDATA[<h1 id="Attention-mechanism-research-timeline"><a href="#Attention-mechanism-research-timeline" class="headerlink" title="Attention mechanism research timeline"></a>Attention mechanism research timeline</h1><p>1.2014, Google Mind team published “Recurrent Models of Visual Attention”.<br>2.2015, “Neural Machine Translation by Jointly Learning to Align and Translate”, the first paper utilized attention mechanism in NLP.<br>3.Show, Attend and Tell: Neural Image Caption Generation with Visual Attention, image caption<br>4.2017, Attention is all you need</p><hr><h1 id="Encoder-Decoder框架"><a href="#Encoder-Decoder框架" class="headerlink" title="Encoder-Decoder框架"></a>Encoder-Decoder框架</h1><p>Encoder-Decoder是深度学习中非常常见的一个模型框架。例如：在Image Caption的应用中Encoder-Decoder就是CNN-RNN的编码-解码框架；在神经网络机器翻译模型中Encoder-Decoder往往就是LSTM-LSTM的编码-解码框架。特别需要注意的是，在机器翻译中是文本到文本的转换，比如将法语翻译成英语，这样的Encoder-Decoder模型也被叫做Sequence to Sequence learning[6]。所谓编码，就是将输入序列编码成一个固定长度的向量；解码，就是将之前生成的固定向量再解码成输出序列。</p><ul><li>rnn的一个例子<br><img src="/../images/2022-06-22-10-07-40.png"><center>convert the information to fixed length with nonlinear function q</center>The familiar operation of q it user the last of sequence h_t</li></ul><p>ffff<br><img src="/../images/2022-06-21-21-31-22.png"></p><h1 id="Attention-机制"><a href="#Attention-机制" class="headerlink" title="Attention 机制"></a>Attention 机制</h1><p>相比于原始的Encoder-Decoder模型，加入Attention机制后最大的区别就是它不在要求编码器将所有输入信息都编码进一个固定长度的向量之中。而是，编码器需要将输入编码成一个向量的序列，在解码的时候，每一步都会选择性的从向量序列中挑选一个子集进行进一步处理。这样，在产生每一个输出的时候，都能够做到充分利用输入序列携带的信息。而且这种方法在翻译任务中取得了非常不错的成果。<br><img src="/../images/2022-06-21-21-33-38.png"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="attention-mechanism-research-timeline">Attention mechanismresearch timeline</h1>1.2014, Google Mind team published "Recurrent Models of VisualAttention". 2.2015, "Neural Machine Translation by Jointly Learning toAlign and Translate", the first paper utilized attention mechanism inNLP. 3.Show, Attend and Tell: Neural Image Caption Generation withVisual Attention, image caption 4.2017, Attention is all you need-------------------------- # Encoder-Decoder框架Encoder-Decoder是深度学习中非常常见的一个模型框架。例如：在ImageCaption的应用中Encoder-Decoder就是CNN-RNN的编码-解码框架；在神经网络机器翻译模型中Encoder-Decoder往往就是LSTM-LSTM的编码-解码框架。特别需要注意的是，在机器翻译中是文本到文本的转换，比如将法语翻译成英语，这样的Encoder-Decoder模型也被叫做Sequenceto Sequencelearning[6]。所谓编码，就是将输入序列编码成一个固定长度的向量；解码，就是将之前生成的固定向量再解码成输出序列。* rnn的一个例子 <img src="../images/2022-06-22-10-07-40.png" /><center>convert the information to fixed length with nonlinear function q</center><p>The familiar operation of q it user the last of sequence h_t</p><p>ffff <img src="../images/2022-06-21-21-31-22.png" /></p><h1 id="attention-机制">Attention 机制</h1><p>相比于原始的Encoder-Decoder模型，加入Attention机制后最大的区别就是它不在要求编码器将所有输入信息都编码进一个固定长度的向量之中。而是，编码器需要将输入编码成一个向量的序列，在解码的时候，每一步都会选择性的从向量序列中挑选一个子集进行进一步处理。这样，在产生每一个输出的时候，都能够做到充分利用输入序列携带的信息。而且这种方法在翻译任务中取得了非常不错的成果。<img src="../images/2022-06-21-21-33-38.png" /></p>]]></content>
     
     
     <categories>
@@ -92,7 +131,7 @@
     <link href="/2022/06/21/markdown/"/>
     <url>/2022/06/21/markdown/</url>
     
-    <content type="html"><![CDATA[<p>#用来代表标题的<br>*unordered list<br>1.ordered list</p>]]></content>
+    <content type="html"><![CDATA[<p>#用来代表标题的 *unordered list 1.ordered list</p><p><strong>Emphasize</strong></p>]]></content>
     
     
     <categories>
@@ -107,19 +146,6 @@
       <tag>markdown</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Hexo 博客搭建</title>
-    <link href="/2022/06/21/hello-world/"/>
-    <url>/2022/06/21/hello-world/</url>
-    
-    <content type="html"><![CDATA[<p><a href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p><h1 id="blog-post-parameters"><a href="#blog-post-parameters" class="headerlink" title="blog post parameters"></a>blog post parameters</h1><p><img src="/../images/2022-06-21-21-49-33.png"></p><h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><p>hexo toc支持可生成文章目录<br><img src="/../images/2022-06-21-21-52-01.png"></p>]]></content>
-    
-    
     
   </entry>
   

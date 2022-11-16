@@ -16,24 +16,21 @@
   <meta name="author" content="Wenjie Fu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;commands blog post parameters 其它hexo toc支持可生成文章目录">
+    <meta name="description" content="The Sensitivity of Differential Privacy Numeric queries, functions such as, \(f: \mathbb{N}^{|\mathcal{X}|} \to \mathbb{R}^k\)are one of the most fundamental types of database queries. These queries m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 博客搭建">
-<meta property="og:url" content="http://example.com/2022/06/21/hello-world/index.html">
+<meta property="og:title" content="Privacy">
+<meta property="og:url" content="http://example.com/2022/11/16/Privacy/index.html">
 <meta property="og:site_name" content="Wenjie Fu&#39;s Blog">
-<meta property="og:description" content="https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;commands blog post parameters 其它hexo toc支持可生成文章目录">
+<meta property="og:description" content="The Sensitivity of Differential Privacy Numeric queries, functions such as, \(f: \mathbb{N}^{|\mathcal{X}|} \to \mathbb{R}^k\)are one of the most fundamental types of database queries. These queries m">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/images/2022-06-21-21-49-33.png">
-<meta property="og:image" content="http://example.com/images/2022-06-21-21-52-01.png">
-<meta property="article:published_time" content="2022-06-21T05:03:10.433Z">
-<meta property="article:modified_time" content="2022-06-21T14:07:34.708Z">
+<meta property="article:published_time" content="2022-11-16T01:17:10.000Z">
+<meta property="article:modified_time" content="2022-11-16T07:31:26.199Z">
 <meta property="article:author" content="Wenjie Fu">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/images/2022-06-21-21-49-33.png">
   
   
   
-  <title>Hexo 博客搭建 - Wenjie Fu&#39;s Blog</title>
+  <title>Privacy - Wenjie Fu&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -84,7 +81,11 @@
 
 
   
-<meta name="generator" content="Hexo 6.2.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head>
 
 
 <body>
@@ -198,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hexo 博客搭建"></span>
+            <span id="subtitle" data-typed-text="Privacy"></span>
           
         </div>
 
@@ -209,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-21 13:03" pubdate>
-          June 21, 2022 pm
+        <time datetime="2022-11-16 09:17" pubdate>
+          November 16, 2022 am
         </time>
       </span>
     
@@ -221,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          71 words
+          1k words
         
       </span>
     
@@ -232,7 +233,7 @@
         
         
         
-          1 mins
+          9 mins
         
       </span>
     
@@ -270,14 +271,38 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hexo 博客搭建</h1>
+            <h1 style="display: none">Privacy</h1>
             
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p>
-<h1 id="blog-post-parameters"><a href="#blog-post-parameters" class="headerlink" title="blog post parameters"></a>blog post parameters</h1><p><img src="/../images/2022-06-21-21-49-33.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><p>hexo toc支持可生成文章目录<br><img src="/../images/2022-06-21-21-52-01.png" srcset="/img/loading.gif" lazyload></p>
+                <h2 id="the-sensitivity-of-differential-privacy">The Sensitivity of
+Differential Privacy</h2>
+<p>Numeric queries, functions such as, <span class="math inline">\(f:
+\mathbb{N}^{|\mathcal{X}|} \to \mathbb{R}^k\)</span>are one of the most
+fundamental types of database queries. These queries map databases to k
+real numbers. One of the important parameters that will determine just
+how accurately we can answer such queries is their ℓ1 sensitivity. <img
+src="../images/2022-11-16-10-04-42.png" srcset="/img/loading.gif" lazyload /> The ℓ1 sensitivity of a
+function gives an upper bound on how much we must perturb its output to
+preserve privacy, i.e., The ℓ1 sensitivity of a function f captures the
+magnitude by which a single individual’s data can change the function f
+in the worst case, and therefore, intuitively, the uncertainty in the
+response that we must introduce in order to hide the participation of a
+single individual.</p>
+<h2 id="guassian-mechanism">Guassian Mechanism</h2>
+<p>The Gaussian mechanism is an alternative to the Laplace mechanism,
+which adds Gaussian noise instead of Laplacian noise. The Gaussian
+mechanism does not satisfy pure ε-differential privacy, but does satisfy
+(ε, δ)-differential privacy.</p>
+<p><span class="math inline">\(\sigma^2 = \frac{2\Delta f^2
+ln(1.25/\delta)}{\epsilon^2}\)</span> for <span
+class="math inline">\(\epsilon \in (0, 1)\)</span>, where <span
+class="math inline">\(\Delta f\)</span> is the <span
+class="math inline">\(l_1\)</span>-sensitivity of <span
+class="math inline">\(f\)</span>.</p>
+<h2 id="laplacian-mechanism">Laplacian Mechanism</h2>
+<h2 id="composition-theorem">Composition Theorem</h2>
 
                 
               </div>
@@ -295,8 +320,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hexo 博客搭建</div>
-      <div>http://example.com/2022/06/21/hello-world/</div>
+      <div>Privacy</div>
+      <div>http://example.com/2022/11/16/Privacy/</div>
     </div>
     <div class="license-meta">
       
@@ -308,7 +333,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>June 21, 2022</div>
+          <div>November 16, 2022</div>
         </div>
       
       
@@ -338,15 +363,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/21/markdown/" title="Markdown">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Markdown</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/07/15/hello-world/" title="Hexo 博客搭建">
+                        <span class="hidden-mobile">Hexo 博客搭建</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -397,6 +422,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -563,6 +594,40 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.1/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
